@@ -22,4 +22,11 @@ public class Gyujtemeny {
             throw new RuntimeException("Hiba a fájl beolvasása során");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Gyujtemeny{" +
+                "gyujtemeny=" + gyujtemeny +
+                '}';
+    }
 }

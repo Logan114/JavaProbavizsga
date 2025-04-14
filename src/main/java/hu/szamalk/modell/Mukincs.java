@@ -26,4 +26,12 @@ public class Mukincs {
     public String getCim() {
         return cim;
     }
+
+    @Override
+    public String toString() {
+        return "Mukincs{" +
+                "alkoto='" + alkoto + '\'' +
+                ", cim='" + cim + '\'' +
+                '}';
+    }
 }

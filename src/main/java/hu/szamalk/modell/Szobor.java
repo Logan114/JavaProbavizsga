@@ -20,5 +20,13 @@ public class Szobor extends Mukincs {
         }
     }
 
- 
+    @Override
+    public String toString() {
+        return "Szobor{" +
+                "alkoto='" + getAlkoto() +'\'' +
+                ", cim='" + getCim() +'\'' +
+                ", anyag='" + anyag + '\'' +
+                ", szazad=" + szazad +
+                '}';
+    }
 }

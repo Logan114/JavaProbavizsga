@@ -17,4 +17,14 @@ public class Festmeny extends Mukincs implements Comparable<Festmeny>{
     public int compareTo(Festmeny o) {
         return this.getTechnika().compareTo(o.getTechnika());
     }
+
+    @Override
+    public String toString() {
+        return "Festmeny{" +
+                "alkoto='" + getAlkoto() +'\'' +
+                ", cim='" + getCim() +'\'' +
+                ", stilus='" + stilus + '\'' +
+                ", technika='" + technika + '\'' +
+                '}';
+    }
 }
