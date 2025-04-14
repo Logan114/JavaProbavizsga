@@ -1,6 +1,9 @@
 package hu.szamalk.view;
 
 import javax.swing.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class GyujtemenyGUI {
     JFrame gui;
@@ -35,4 +38,7 @@ public class GyujtemenyGUI {
     public static void main(String[] args) {
         new GyujtemenyGUI();
     }
-}
+
+
+    }
+

@@ -2,9 +2,7 @@ package hu.szamalk.view;
 
 import hu.szamalk.modell.Gyujtemeny;
 import hu.szamalk.modell.Mukincs;
-
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
@@ -23,10 +21,11 @@ public class Konzol extends Gyujtemeny {
 
     public void fajlbair() {
         try {
-            FileOutputStream kiir = new FileOutputStream("gyujtemeny.txt");
-            ObjectOutputStream oos = new ObjectOutputStream(kiir);
+            FileOutputStream file = new FileOutputStream("gyujtemeny.txt");
+            ObjectOutputStream kiir = new ObjectOutputStream(file);
+            file.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Hiba a fájl írása közben");
         }
     }
 }

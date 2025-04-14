@@ -1,7 +1,9 @@
 package hu.szamalk.modell;
 
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -15,14 +17,16 @@ public class Gyujtemeny {
         gyujtemeny.add(new Szobor("Michelangelo","Dávid",Mukincs.Kategoria.EREDETI,"Márvány",16));
     }
 
-    public void beolvas(){
+    public void beolvas() {
         try {
-            List<String> sorok = Files.readAllLines(Path.of("gyujtemeny.txt"));
-        } catch (IOException e) {
-            throw new RuntimeException("Hiba a fájl beolvasása során");
+            FileInputStream file = new FileInputStream("gyujtemeny.txt");
+            ObjectInputStream fileBe = new ObjectInputStream(file);
+            gyujtemeny = (List<Mukincs>) fileBe.readObject();
+            fileBe.close();
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException("Hiba a fájl beolvasása közben");
         }
     }
-
     @Override
     public String toString() {
         return "Gyujtemeny{" +
