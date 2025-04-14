@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class Konzol extends Gyujtemeny {
+public class Konzol extends Gyujtemeny implements Comparable<Gyujtemeny> {
 
     public Konzol() throws IOException {
         KonzolKiir();
@@ -27,5 +27,11 @@ public class Konzol extends Gyujtemeny {
         } catch (IOException e) {
             throw new RuntimeException("Hiba a fájl írása közben");
         }
+    }
+
+
+    @Override
+    public int compareTo(Gyujtemeny o) {
+        return 0;
     }
 }

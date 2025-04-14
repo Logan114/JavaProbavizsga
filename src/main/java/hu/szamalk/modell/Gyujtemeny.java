@@ -27,6 +27,8 @@ public class Gyujtemeny {
             throw new RuntimeException("Hiba a fájl beolvasása közben");
         }
     }
+
+
     @Override
     public String toString() {
         return "Gyujtemeny{" +
