@@ -15,12 +15,9 @@ public class Festmeny extends Mukincs implements Comparable<Festmeny>{
     public String getTechnika() {
         return technika;
     }
-    public List<Gyujtemeny> technikakFestokSzerint(){
-        List<Gyujtemeny> festmenyek = new ArrayList<>();
-        for (Gyujtemeny gyujtemeny : gyujtemeny){
-            if (gyujtemeny instanceof Festmeny )
-        }
-    }
+
+
+
     @Override
     public int compareTo(Festmeny o) {
         return this.getTechnika().compareTo(o.getTechnika());
